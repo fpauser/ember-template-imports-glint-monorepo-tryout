@@ -185,3 +185,92 @@ declare module '@glint/environment-ember-loose/registry' {
 
 {{outlet}}
 ```
+
+
+## Step 05
+
+* Install `ember-route-template`
+
+```bash
+cd packages/demo-app
+pnpm i -D ember-route-template
+```
+
+* Update `packages/demo-app/app/components/demo-app-comp01.gts`
+
+```gts
+import { type TOC } from '@ember/component/template-only';
+
+interface Signature {
+  Element: HTMLSpanElement;
+  Args: {
+    name: string;
+  };
+}
+
+export const DemoAppComp01: TOC<Signature> = <template>
+  <div>
+    Hello
+    {{@name}}!
+  </div>
+</template>;
+
+export default DemoAppComp01;
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    DemoAppComp01: typeof DemoAppComp01;
+  }
+}
+```
+
+* Update `packages/demo-app/app/components/demo-app-comp02.tgs`
+
+```gts
+import { type TOC } from '@ember/component/template-only';
+
+interface DemoAppComp02Signature {
+  Element: HTMLSpanElement;
+  Args: {};
+  Blocks: {
+    default: [];
+  };
+}
+
+export const DemoAppComp02: TOC<DemoAppComp02Signature> = <template>
+  <div>
+    Hello
+    {{yield}}!
+  </div>
+</template>;
+
+export default DemoAppComp02;
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    DemoAppComp02: typeof DemoAppComp02;
+  }
+}
+```
+
+* Rename `application.hbs` to `application.gts` and update:
+
+```gts
+import { pageTitle } from 'ember-page-title';
+import DemoAppComp01 from '../components/demo-app-comp01';
+import DemoAppComp02 from '../components/demo-app-comp02';
+import RouteTemplate from 'ember-route-template';
+
+export default RouteTemplate(
+  <template>
+    {{pageTitle 'DemoApp'}}
+
+    <DemoAppComp01 @name='Name1' />
+    <DemoAppComp02>Name2</DemoAppComp02>
+
+    {{outlet}}
+  </template>,
+);
+```
+
+* Add a global shared `tsconfig.shared.json` and update `packages/demp-app/tsconfig.json` to extend from it

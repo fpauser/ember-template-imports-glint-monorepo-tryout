@@ -1,16 +1,17 @@
 import { type TOC } from '@ember/component/template-only';
 
-interface Signature {
+interface DemoAppComp02Signature {
   Element: HTMLSpanElement;
-  Args: {
-    name: string;
+  Args: {};
+  Blocks: {
+    default: [];
   };
 }
 
-export const DemoAppComp02: TOC<Signature> = <template>
+export const DemoAppComp02: TOC<DemoAppComp02Signature> = <template>
   <div>
     Hello
-    {{@name}}!
+    {{yield}}!
   </div>
 </template>;
 
