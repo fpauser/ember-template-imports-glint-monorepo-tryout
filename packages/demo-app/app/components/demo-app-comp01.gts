@@ -1,0 +1,6 @@
+<template>
+  <div>
+    Hello
+    {{@name}}!
+  </div>
+</template>

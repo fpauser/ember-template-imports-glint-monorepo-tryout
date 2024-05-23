@@ -239,9 +239,15 @@ importers:
       '@glimmer/tracking':
         specifier: ^1.1.2
         version: 1.1.2
+      '@glint/core':
+        specifier: ^1.4.0
+        version: 1.4.0(typescript@5.4.5)
       '@glint/environment-ember-loose':
         specifier: ^1.4.0
         version: 1.4.0(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glint/template@1.4.0)(@types/ember__array@4.0.10(@babel/core@7.24.5))(@types/ember__component@4.0.22(@babel/core@7.24.5))(@types/ember__controller@4.0.12(@babel/core@7.24.5))(@types/ember__object@4.0.12(@babel/core@7.24.5))(@types/ember__routing@4.0.22(@babel/core@7.24.5))(ember-cli-htmlbars@6.3.0)(ember-modifier@4.1.0(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.91.0)))
+      '@glint/environment-ember-template-imports':
+        specifier: ^1.4.0
+        version: 1.4.0(@glint/environment-ember-loose@1.4.0(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glint/template@1.4.0)(@types/ember__array@4.0.10(@babel/core@7.24.5))(@types/ember__component@4.0.22(@babel/core@7.24.5))(@types/ember__controller@4.0.12(@babel/core@7.24.5))(@types/ember__object@4.0.12(@babel/core@7.24.5))(@types/ember__routing@4.0.22(@babel/core@7.24.5))(ember-cli-htmlbars@6.3.0)(ember-modifier@4.1.0(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.91.0))))(@glint/template@1.4.0)(@types/ember__component@4.0.22(@babel/core@7.24.5))(@types/ember__helper@4.0.7(@babel/core@7.24.5))(@types/ember__modifier@4.0.9(@babel/core@7.24.5))(@types/ember__routing@4.0.22(@babel/core@7.24.5))
       '@glint/template':
         specifier: ^1.4.0
         version: 1.4.0
@@ -414,8 +420,8 @@ importers:
         specifier: ^9.1.0
         version: 9.1.0(eslint@8.57.0)
       eslint-plugin-ember:
-        specifier: ^11.12.0
-        version: 11.12.0(eslint@8.57.0)
+        specifier: ^12.1.0
+        version: 12.1.1(@babel/core@7.24.5)(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)
       eslint-plugin-n:
         specifier: ^16.6.2
         version: 16.6.2(eslint@8.57.0)
@@ -476,6 +482,13 @@ packages:
   '@babel/core@7.24.5':
     resolution: {integrity: sha512-tVQRucExLQ02Boi4vdPp49svNGcfL2GhdTCT9aldhXgCJVAI21EtRfBettiuLUwce/7r6bFdgs6JFkcdTiFttA==}
     engines: {node: '>=6.9.0'}
+
+  '@babel/eslint-parser@7.23.10':
+    resolution: {integrity: sha512-3wSYDPZVnhseRnxRJH6ZVTNknBz76AEnyC+AYYhasjP3Yy23qz0ERR7Fcd2SHmYuSFJ2kY9gaaDd3vyqU09eSw==}
+    engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
+    peerDependencies:
+      '@babel/core': ^7.11.0
+      eslint: ^7.5.0 || ^8.0.0
 
   '@babel/generator@7.24.5':
     resolution: {integrity: sha512-x32i4hEXvr+iI0NEoEfDKzlemF8AmtOP8CcrRaEcpzysWuoEb1KknpcvMsHKPONoKZiDuItklgWhB18xEhr9PA==}
@@ -1428,6 +1441,9 @@ packages:
   '@glimmer/syntax@0.87.1':
     resolution: {integrity: sha512-zYzZT6LgpSF0iv5iuxmMV5Pf52aE8dukNC2KfrHC6gXJfM4eLZMZcyk76NW5m+SEetZSOXX6AWv/KwLnoxiMfQ==}
 
+  '@glimmer/syntax@0.92.0':
+    resolution: {integrity: sha512-h8pYBC2cCnEyjbZBip2Yw4qi8S8sjNCYAb57iHek3AIhyFKMM13aTN+/aajFOM4FUTMCVE2B/iAAmO41WRCX4A==}
+
   '@glimmer/tracking@1.1.2':
     resolution: {integrity: sha512-cyV32zsHh+CnftuRX84ALZpd2rpbDrhLhJnTXn9W//QpqdRZ5rdMsxSY9fOsj0CKEc706tmEU299oNnDc0d7tA==}
 
@@ -1471,6 +1487,12 @@ packages:
   '@glimmer/wire-format@0.92.0':
     resolution: {integrity: sha512-yKhfU7b3PN86iqbfKksB+F9PB/RqbVkZlcRpZWRpEL3HnZ0bJUKC9bsOJynOg77PDXuYQXkbDMfL8ngTuxk+rg==}
 
+  '@glint/core@1.4.0':
+    resolution: {integrity: sha512-nq27a/1R6kc3lsuciz8z9IZO1NQCbNkEBxf5KJI7AUrnps6RzQzmq3pmwO24zQYmFcH4sqpod8fleNIpg8YEqg==}
+    hasBin: true
+    peerDependencies:
+      typescript: '>=4.8.0'
+
   '@glint/environment-ember-loose@1.4.0':
     resolution: {integrity: sha512-vFR3qgPTisGzS36e04195wTUrtUc6GuVwm6hsC/XXx6PeRw/6rtMxhK08Aw/VtDc00UqQzM9sIEghPVKHwqVVQ==}
     peerDependencies:
@@ -1497,6 +1519,25 @@ packages:
       ember-cli-htmlbars:
         optional: true
       ember-modifier:
+        optional: true
+
+  '@glint/environment-ember-template-imports@1.4.0':
+    resolution: {integrity: sha512-VXcUgea92l7NFShU26rpQn+hYUZ7ex/rNtU9vnw2BAVZaPfxZROokW8ABj8aMaCUDe60CoMVZ1/QSeONSCln3w==}
+    peerDependencies:
+      '@glint/environment-ember-loose': ^1.4.0
+      '@glint/template': ^1.4.0
+      '@types/ember__component': ^4.0.10
+      '@types/ember__helper': ^4.0.1
+      '@types/ember__modifier': ^4.0.3
+      '@types/ember__routing': ^4.0.12
+    peerDependenciesMeta:
+      '@types/ember__component':
+        optional: true
+      '@types/ember__helper':
+        optional: true
+      '@types/ember__modifier':
+        optional: true
+      '@types/ember__routing':
         optional: true
 
   '@glint/template@1.4.0':
@@ -1556,6 +1597,9 @@ packages:
   '@ljharb/through@2.3.13':
     resolution: {integrity: sha512-/gKJun8NNiWGZJkGzI/Ragc53cOdcLNdzjLaIa+GEjguQs0ulsurx8WN0jijdK9yPqDvziX995sMRLyLt1uZMQ==}
     engines: {node: '>= 0.4'}
+
+  '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
+    resolution: {integrity: sha512-54/JRvkLIzzDWshCWfuhadfrfZVPiElY8Fcgmg1HroEly/EDSszzhBAsarCux+D/kOslTRquNzuyGSmUSTTHGg==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -3497,6 +3541,16 @@ packages:
     peerDependencies:
       '@ember/string': ^3.1.1
 
+  ember-eslint-parser@0.4.3:
+    resolution: {integrity: sha512-wMPoaaA+i/F/tPPxURRON9XXJH5MRUOZ5x/9CVJTSpL+0n4EWphyztb20gR+ZJeShnOACQpAdFy6YSS1/JSHKw==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      '@babel/core': ^7.23.6
+      '@typescript-eslint/parser': '*'
+    peerDependenciesMeta:
+      '@typescript-eslint/parser':
+        optional: true
+
   ember-fetch@8.1.2:
     resolution: {integrity: sha512-TVx24/jrvDIuPL296DV0hBwp7BWLcSMf0I8464KGz01sPytAB+ZAePbc9ooBTJDkKZEGFgatJa4nj3yF1S9Bpw==}
     engines: {node: '>= 10'}
@@ -3702,6 +3756,16 @@ packages:
     engines: {node: 14.* || 16.* || >= 18}
     peerDependencies:
       eslint: '>= 7'
+
+  eslint-plugin-ember@12.1.1:
+    resolution: {integrity: sha512-95YWz2nVWtFHwrNlW8kpBivudieTHkiW3vlG3X1P24IpQLigVtPe14LDcZ/vPtEV92Ccao4xcKPKWWOeG0hSNQ==}
+    engines: {node: 18.* || 20.* || >= 21}
+    peerDependencies:
+      '@typescript-eslint/parser': '*'
+      eslint: '>= 8'
+    peerDependenciesMeta:
+      '@typescript-eslint/parser':
+        optional: true
 
   eslint-plugin-es-x@7.6.0:
     resolution: {integrity: sha512-I0AmeNgevgaTR7y2lrVCJmGYF0rjoznpDvqV/kIkZSZbZ8Rw3eu4cGlvBBULScfkSOCzqKbff5LR4CNrV7mZHA==}
@@ -6773,6 +6837,26 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
 
+  vscode-jsonrpc@8.1.0:
+    resolution: {integrity: sha512-6TDy/abTQk+zDGYazgbIPc+4JoXdwC8NHU9Pbn4UJP1fehUyZmM4RHp5IthX7A6L5KS30PRui+j+tbbMMMafdw==}
+    engines: {node: '>=14.0.0'}
+
+  vscode-languageserver-protocol@3.17.3:
+    resolution: {integrity: sha512-924/h0AqsMtA5yK22GgMtCYiMdCOtWTSGgUOkgEDX+wk2b0x4sAfLiO4NxBxqbiVtz7K7/1/RgVrVI0NClZwqA==}
+
+  vscode-languageserver-textdocument@1.0.11:
+    resolution: {integrity: sha512-X+8T3GoiwTVlJbicx/sIAF+yuJAqz8VvwJyoMVhwEMoEKE/fkDmrqUgDMyBECcM2A2frVZIUj5HI/ErRXCfOeA==}
+
+  vscode-languageserver-types@3.17.3:
+    resolution: {integrity: sha512-SYU4z1dL0PyIMd4Vj8YOqFvHu7Hz/enbWtpfnVbJHU4Nd1YNYx8u0ennumc6h48GQNeOLxmwySmnADouT/AuZA==}
+
+  vscode-languageserver@8.1.0:
+    resolution: {integrity: sha512-eUt8f1z2N2IEUDBsKaNapkz7jl5QpskN2Y0G01T/ItMxBxw1fJwvtySGB9QMecatne8jFIWJGWI61dWjyTLQsw==}
+    hasBin: true
+
+  vscode-uri@3.0.8:
+    resolution: {integrity: sha512-AyFQ0EVmsOZOlAnxoFOGOq1SQDWAB7C6aqMGS23svWAllfOaxbuFvcT8D1i8z3Gyn8fraVeZNNmN6e9bxxXkKw==}
+
   walk-sync@0.2.7:
     resolution: {integrity: sha512-OH8GdRMowEFr0XSHQeX5fGweO6zSVHo7bG/0yJQx6LAj9Oukz0C8heI3/FYectT66gY0IPGe89kOvU410/UNpg==}
 
@@ -6988,6 +7072,14 @@ snapshots:
       semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
+
+  '@babel/eslint-parser@7.23.10(@babel/core@7.24.5)(eslint@8.57.0)':
+    dependencies:
+      '@babel/core': 7.24.5
+      '@nicolo-ribaudo/eslint-scope-5-internals': 5.1.1-v1
+      eslint: 8.57.0
+      eslint-visitor-keys: 2.1.0
+      semver: 6.3.1
 
   '@babel/generator@7.24.5':
     dependencies:
@@ -8366,6 +8458,14 @@ snapshots:
       '@handlebars/parser': 2.0.0
       simple-html-tokenizer: 0.5.11
 
+  '@glimmer/syntax@0.92.0':
+    dependencies:
+      '@glimmer/interfaces': 0.92.0
+      '@glimmer/util': 0.92.0
+      '@glimmer/wire-format': 0.92.0
+      '@handlebars/parser': 2.0.0
+      simple-html-tokenizer: 0.5.11
+
   '@glimmer/tracking@1.1.2':
     dependencies:
       '@glimmer/env': 0.1.7
@@ -8436,6 +8536,21 @@ snapshots:
       '@glimmer/interfaces': 0.92.0
       '@glimmer/util': 0.92.0
 
+  '@glint/core@1.4.0(typescript@5.4.5)':
+    dependencies:
+      '@glimmer/syntax': 0.84.3
+      escape-string-regexp: 4.0.0
+      semver: 7.6.2
+      silent-error: 1.1.1
+      typescript: 5.4.5
+      uuid: 8.3.2
+      vscode-languageserver: 8.1.0
+      vscode-languageserver-textdocument: 1.0.11
+      vscode-uri: 3.0.8
+      yargs: 17.7.2
+    transitivePeerDependencies:
+      - supports-color
+
   '@glint/environment-ember-loose@1.4.0(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glint/template@1.4.0)(@types/ember__array@4.0.10(@babel/core@7.24.5))(@types/ember__component@4.0.22(@babel/core@7.24.5))(@types/ember__controller@4.0.12(@babel/core@7.24.5))(@types/ember__object@4.0.12(@babel/core@7.24.5))(@types/ember__routing@4.0.22(@babel/core@7.24.5))(ember-cli-htmlbars@6.3.0)(ember-modifier@4.1.0(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.91.0)))':
     dependencies:
       '@glimmer/component': 1.1.2(@babel/core@7.24.5)
@@ -8448,6 +8563,17 @@ snapshots:
       '@types/ember__routing': 4.0.22(@babel/core@7.24.5)
       ember-cli-htmlbars: 6.3.0
       ember-modifier: 4.1.0(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.91.0))
+
+  '@glint/environment-ember-template-imports@1.4.0(@glint/environment-ember-loose@1.4.0(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glint/template@1.4.0)(@types/ember__array@4.0.10(@babel/core@7.24.5))(@types/ember__component@4.0.22(@babel/core@7.24.5))(@types/ember__controller@4.0.12(@babel/core@7.24.5))(@types/ember__object@4.0.12(@babel/core@7.24.5))(@types/ember__routing@4.0.22(@babel/core@7.24.5))(ember-cli-htmlbars@6.3.0)(ember-modifier@4.1.0(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.91.0))))(@glint/template@1.4.0)(@types/ember__component@4.0.22(@babel/core@7.24.5))(@types/ember__helper@4.0.7(@babel/core@7.24.5))(@types/ember__modifier@4.0.9(@babel/core@7.24.5))(@types/ember__routing@4.0.22(@babel/core@7.24.5))':
+    dependencies:
+      '@glint/environment-ember-loose': 1.4.0(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glint/template@1.4.0)(@types/ember__array@4.0.10(@babel/core@7.24.5))(@types/ember__component@4.0.22(@babel/core@7.24.5))(@types/ember__controller@4.0.12(@babel/core@7.24.5))(@types/ember__object@4.0.12(@babel/core@7.24.5))(@types/ember__routing@4.0.22(@babel/core@7.24.5))(ember-cli-htmlbars@6.3.0)(ember-modifier@4.1.0(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.91.0)))
+      '@glint/template': 1.4.0
+      content-tag: 2.0.1
+    optionalDependencies:
+      '@types/ember__component': 4.0.22(@babel/core@7.24.5)
+      '@types/ember__helper': 4.0.7(@babel/core@7.24.5)
+      '@types/ember__modifier': 4.0.9(@babel/core@7.24.5)
+      '@types/ember__routing': 4.0.22(@babel/core@7.24.5)
 
   '@glint/template@1.4.0': {}
 
@@ -8513,6 +8639,10 @@ snapshots:
   '@ljharb/through@2.3.13':
     dependencies:
       call-bind: 1.0.7
+
+  '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
+    dependencies:
+      eslint-scope: 5.1.1
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -11247,6 +11377,19 @@ snapshots:
       - uglify-js
       - webpack-cli
 
+  ember-eslint-parser@0.4.3(@babel/core@7.24.5)(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0):
+    dependencies:
+      '@babel/core': 7.24.5
+      '@babel/eslint-parser': 7.23.10(@babel/core@7.24.5)(eslint@8.57.0)
+      '@glimmer/syntax': 0.92.0
+      content-tag: 1.2.2
+      eslint-scope: 7.2.2
+      html-tags: 3.3.1
+    optionalDependencies:
+      '@typescript-eslint/parser': 6.21.0(eslint@8.57.0)(typescript@5.4.5)
+    transitivePeerDependencies:
+      - eslint
+
   ember-fetch@8.1.2:
     dependencies:
       abortcontroller-polyfill: 1.7.5
@@ -11654,6 +11797,24 @@ snapshots:
       snake-case: 3.0.4
     transitivePeerDependencies:
       - supports-color
+
+  eslint-plugin-ember@12.1.1(@babel/core@7.24.5)(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0):
+    dependencies:
+      '@ember-data/rfc395-data': 0.0.4
+      css-tree: 2.3.1
+      ember-eslint-parser: 0.4.3(@babel/core@7.24.5)(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)
+      ember-rfc176-data: 0.3.18
+      eslint: 8.57.0
+      eslint-utils: 3.0.0(eslint@8.57.0)
+      estraverse: 5.3.0
+      lodash.camelcase: 4.3.0
+      lodash.kebabcase: 4.1.1
+      requireindex: 1.2.0
+      snake-case: 3.0.4
+    optionalDependencies:
+      '@typescript-eslint/parser': 6.21.0(eslint@8.57.0)(typescript@5.4.5)
+    transitivePeerDependencies:
+      - '@babel/core'
 
   eslint-plugin-es-x@7.6.0(eslint@8.57.0):
     dependencies:
@@ -15139,6 +15300,23 @@ snapshots:
       semver: 7.6.2
 
   vary@1.1.2: {}
+
+  vscode-jsonrpc@8.1.0: {}
+
+  vscode-languageserver-protocol@3.17.3:
+    dependencies:
+      vscode-jsonrpc: 8.1.0
+      vscode-languageserver-types: 3.17.3
+
+  vscode-languageserver-textdocument@1.0.11: {}
+
+  vscode-languageserver-types@3.17.3: {}
+
+  vscode-languageserver@8.1.0:
+    dependencies:
+      vscode-languageserver-protocol: 3.17.3
+
+  vscode-uri@3.0.8: {}
 
   walk-sync@0.2.7:
     dependencies:
