@@ -19,3 +19,20 @@ ember new demo-app -dir packages/demo-app -sg -sn --typescript
 packages:
 - packages/demo-app
 ```
+
+
+## Step 02
+
+* Generate demo-addon
+  
+```
+ember addon demo-addon -dir packages/demo-addon -sg -sn --typescript
+```
+
+* Update `pnpm-workspace.yaml`
+
+```
+packages:
+- packages/demo-app
+- packages/demo-addon
+```
