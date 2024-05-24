@@ -51,5 +51,27 @@ module.exports = {
       files: ['tests/**/*-test.{js,ts}'],
       extends: ['plugin:qunit/recommended'],
     },
+    // glimmer-js
+    {
+      files: ['**/*.gjs'],
+      parser: 'ember-eslint-parser',
+      plugins: ['ember'],
+      extends: [
+        'eslint:recommended',
+        'plugin:ember/recommended',
+        'plugin:ember/recommended-gjs',
+      ],
+    },
+    // glimmer-ts
+    {
+      files: ['**/*.gts'],
+      parser: 'ember-eslint-parser',
+      plugins: ['ember'],
+      extends: [
+        'eslint:recommended',
+        'plugin:ember/recommended',
+        'plugin:ember/recommended-gts',
+      ],
+    },
   ],
 };

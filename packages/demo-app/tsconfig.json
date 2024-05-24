@@ -6,9 +6,14 @@
     // work with TypeScript.
     "baseUrl": ".",
     "paths": {
+      "demo-addon": ["../demo-addon/addon"],
+      "demo-addon/*": ["../demo-addon/addon/*"],
       "demo-app/tests/*": ["tests/*"],
       "demo-app/*": ["app/*"],
-      "*": ["types/*"]
-    }
+      "*": ["types/*","../demo-addon/types/*"]
+    },
+
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true
   }
 }

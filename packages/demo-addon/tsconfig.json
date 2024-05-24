@@ -1,5 +1,5 @@
 {
-  "extends": "@tsconfig/ember/tsconfig.json",
+  "extends": "../../tsconfig.shared.json",
   "compilerOptions": {
     // The combination of `baseUrl` with `paths` allows Ember's classic package
     // layout, which is not resolvable with the Node resolution algorithm, to
@@ -13,6 +13,11 @@
       "demo-addon/test-support": ["addon-test-support"],
       "demo-addon/test-support/*": ["addon-test-support/*"],
       "*": ["types/*"]
-    }
-  }
+    },
+
+    "declarationDir": "declarations",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true
+  },
+  "include": ["addon/**/*", "types/**/*"]
 }
