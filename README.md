@@ -3,5 +3,5 @@
 * pnpm monorepo
 * ember app + addon (both stable ember v5.8)
 * typescript
-* ember-template-import
+* ember-template-imports
 * glint type checking
