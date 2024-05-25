@@ -48,7 +48,8 @@
   "dependencies": {
     "@babel/core": "^7.24.6",
     "ember-cli-babel": "^8.2.0",
-    "ember-cli-htmlbars": "^6.3.0"
+    "ember-cli-htmlbars": "^6.3.0",
+    "ember-template-imports": "^4.1.1"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.1.0",
@@ -101,7 +102,6 @@
     "ember-resolver": "^11.0.1",
     "ember-source": "~5.8.0",
     "ember-source-channel-url": "^3.0.0",
-    "ember-template-imports": "^4.1.1",
     "ember-template-lint": "^5.13.0",
     "ember-try": "^3.0.0",
     "eslint": "^8.57.0",
